@@ -2,7 +2,7 @@ import React from 'react';
 import './css/Header.css'
 
 function Header() {
-    const title = ("Quiz it up");
+    const title = "Quiz it up";
     return (
         <header>
             <h1>{title}</h1>
