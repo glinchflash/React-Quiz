@@ -17,9 +17,6 @@ function DisplayQuestions() {
         try {
             const response = await fetch(Settings.urlQuestions);
             const elements = await response.json();
-            console.log(elements);
-
-
             for (const question of elements.results) {
                 questionsArr.push((decode(question.question)))
                 Answers.setCorrectAnswer(decode(question.correct_answer))
@@ -38,6 +35,7 @@ function DisplayQuestions() {
     function combineAnswers() {
         console.log(Answers.incorrectAnswer);
         console.log(Answers.correctAnswer);
+
         if(Answers.incorrectAnswer[0].length>1){
             for (const answer of Answers.incorrectAnswer[0]){
                 allAnswers.push(answer)
@@ -45,6 +43,7 @@ function DisplayQuestions() {
         }else{
             allAnswers.push(Answers.incorrectAnswer[0])
         }
+
         allAnswers.push(Answers.correctAnswer)
         console.log(allAnswers);
         return (

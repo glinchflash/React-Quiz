@@ -1,9 +1,8 @@
 import '../components/css/Answers.css'
-class DisplayAnswers
+class GetAnswers
 {
     static correctAnswer = "";
-    static incorrectAnswer = []
-    static allAnswers = [];
+    static incorrectAnswer = [];
 
     static setCorrectAnswer(answer){
         this.correctAnswer = answer
@@ -15,4 +14,4 @@ class DisplayAnswers
 
 }
 
-export default DisplayAnswers
+export default GetAnswers
