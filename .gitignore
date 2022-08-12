@@ -1,3 +1,4 @@
 .idea
 node_modules
-package-lock.json
+kahoot-but-better/package-lock.json
+kahoot-but-better/.gitignore
