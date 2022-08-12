@@ -1,24 +1,20 @@
-import React, {useState} from "react";
-import Form from "../components/Form";
-
-
 class Settings{
-     amount = 10;
-     urlQuestions = "";
 
-     handleAmount(){
+     static urlQuestions = "https://opentdb.com/api.php?amount=10&category=20";
 
+     static setAmount(amount){
+         this.urlQuestions =  "https://opentdb.com/api.php?amount=" + amount + "&category=20";;
      }
-}
 
 
-function Settings(props) {
-
-    return (
-        <>
-       <Form amountSetting={handleAmount} getQuestions={getQuestions} />
-        </>
-    )
+    static handleAmount = event => {
+        if (isNaN(event.target.value)) {
+            alert("The amount has to be a number, please re-enter a number")
+        } else {
+            this.setAmount(event.target.value)
+            console.log(this.urlQuestions);
+        }
+    }
 }
 
 
