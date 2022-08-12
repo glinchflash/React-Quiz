@@ -1,0 +1,29 @@
+.answers{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(145, 2, 2) 0%, rgb(10, 14, 10) 50%, rgb(145, 2, 2) 100%);
+    border-width: 3px;
+    border-style: dotted;
+    border-image: linear-gradient(#c40c28, #0b0277) 1;
+    width: 20%;
+    height: 15%;
+    margin: 1% auto auto;
+}
+
+.answersContainer{
+    display: flex;
+    width: 40%;
+    height: 20%;
+    margin:auto auto;
+    justify-content: center;
+}
+
+.answerButton{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(145, 2, 2) 0%, rgb(10, 14, 10) 50%, rgb(145, 2, 2) 100%);
+    border-width: 3px;
+    border-style: dotted;
+    border-image: linear-gradient(#c40c28, #0b0277) 1;
+    margin: 2%;
+    color:lightskyblue;
+    overflow-wrap: break-word;
+}

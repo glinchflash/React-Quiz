@@ -1,4 +1,11 @@
 .question{
+    color: lightskyblue;
+    overflow-wrap: break-word;
+    margin: auto auto;
+    font-size: large;
+}
+
+.questionAndAnswers{
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgb(145, 2, 2) 0%, rgb(10, 14, 10) 50%, rgb(145, 2, 2) 100%);
     border-width: 3px;
