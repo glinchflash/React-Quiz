@@ -1,0 +1,12 @@
+.question{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(145, 2, 2) 0%, rgb(10, 14, 10) 50%, rgb(145, 2, 2) 100%);
+    border-width: 3px;
+    border-style: dotted;
+    border-image: linear-gradient(#c40c28, #0b0277) 1;
+    color: lightskyblue;
+    width: 50%;
+    height: 15%;
+    overflow-wrap: break-word;
+    margin: 1% auto auto;
+}
