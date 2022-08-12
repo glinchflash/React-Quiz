@@ -50,7 +50,7 @@ function DisplayQuestions() {
         return (
             allAnswers ? allAnswers.map((answer, i) => {
                 return (
-                    <button key={i} className="answerButton">{answer}</button>
+                    <button type="submit" key={i} className="answerButton">{answer}</button>
                 )
             }) : <p>Answers failed to load</p>
         )
