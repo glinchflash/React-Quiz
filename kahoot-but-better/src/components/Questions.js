@@ -1,36 +1,37 @@
-import React from "react";
-import {useState} from "@types/react";
+import React,{useState} from "react";
+import {decode} from 'html-entities';
 import Settings from "../Helpers/Settings";
 import Form from "./Form";
+import './css/Questions.css';
 
 function DisplayQuestions(){
-    <Form getQuestions={getQuestions()}/>
-
-    const urlQuestions = "https://opentdb.com/api.php?amount=" + amount + "&category=20";
     const [questions, setQuestions] = useState([]);
 
 
-    const getQuestions = async e => {
+    const getQuestions = async () => {
         const questionsArr=[]
-        e.preventDefault();
+        console.log('Time to get questions')
         try {
-            const response = await fetch(urlQuestions);
+            const response = await fetch(Settings.urlQuestions);
             const elements = await response.json();
+            console.log(elements);
             for (const question of elements.results) {
-                questionsArr.push((question.question))
+                questionsArr.push((decode(question.question)))
             }
             console.log(questionsArr);
             setQuestions(questionsArr)
 
         } catch (error) {
             console.log("can't fetch api", error);
+            console.log(Settings.urlQuestions);
         }
     };
 
     return(
         <>
+            <Form searchQuestions={getQuestions}/>
             {questions ? questions.map((question,i) => {
-                    return <p key={i}>{question}</p>
+                    return <p key={i} className="question">{question}</p>
                 })
                 :<p>There are no questions!</p>
             }
